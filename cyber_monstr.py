@@ -12,6 +12,6 @@ while True:
     print('Введите пароль:')
     player_key = input()
     start_socket.send(player_key.encode())
-    key_combination = start_socket.recv(1024)
-    print(key_combination.decode('utf-8'))
+    status = start_socket.recv(1024)
+    print(status.decode('utf-8'))
 start_socket.close()
