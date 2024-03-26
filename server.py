@@ -3,7 +3,7 @@ import socket
 SERVER = 'localhost'
 PORT = 5555
 
-KEY = 55749
+KEY = 557497654398
 
 start_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 start_socket.bind((SERVER, PORT))
