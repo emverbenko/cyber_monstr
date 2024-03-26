@@ -10,8 +10,8 @@ start_socket.bind((SERVER, PORT))
 start_socket.listen(2)
 conn, addr = start_socket.accept()
 
-right_key = 'Пароль верный! Внимание! Активация кибер монстра!'
-wrong_key = 'Неверный пароль! Пожалуста введите пароль ещё раз!'
+right_key = str.encode('Пароль верный! Внимание! Активация кибер монстра!')
+wrong_key = str.encode('Неверный пароль! Пожалуста введите пароль ещё раз!')
 
 while True:
     response = conn.recv(1024)
@@ -19,5 +19,4 @@ while True:
         conn.send(right_key)
     else:
         conn.send(wrong_key)
-    conn.send(response)
 conn.close()
